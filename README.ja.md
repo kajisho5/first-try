@@ -355,6 +355,7 @@ python3 -m unittest discover -s tests
 | [`examples/ffmpeg-skill`](examples/ffmpeg-skill/README.md) | 元になった測定。126 件の推測と台帳つき |
 | [`tests/`](tests) | テストと試験用ツール |
 | [`brand/logo`](brand/logo) | ロゴ（横長の明るい画面用・暗い画面用と、マークだけのもの） |
+| [`brand/social-preview.png`](brand/social-preview.png) | リンクを貼ったときに出る画像（1280 × 640） |
 
 ## 応援する
 

@@ -353,6 +353,7 @@ with the faults `first-try` looks for.
 | [`examples/ffmpeg-skill`](examples/ffmpeg-skill/README.md) | the round this came from, with its 126 guesses and its ledger |
 | [`tests/`](tests) | the test suite and the toy tool |
 | [`brand/logo`](brand/logo) | the logo: horizontal (light, dark) and the mark alone |
+| [`brand/social-preview.png`](brand/social-preview.png) | the repository's social preview, 1280 × 640 |
 
 ## Support
 
