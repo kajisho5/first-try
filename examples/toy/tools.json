@@ -1,0 +1,4 @@
+{"placeholders": {"clip": "in.png"},
+ "always": ["--dry-run"],
+ "tools": [{"name": "toy", "run": ["python3", "tests/toy.py"], "base": ["{clip}", "--degrees", "2"]},
+           {"name": "toy-plain", "run": ["python3", "tests/toy.py", "--plain"], "about": "The same tool, without teach.", "base": ["{clip}", "--degrees", "2"]}]}
