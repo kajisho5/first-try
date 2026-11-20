@@ -1,0 +1,1353 @@
+[
+ {
+  "tool": "audio",
+  "request": "remove background hiss from the voice track",
+  "argv": [
+   "{clip}",
+   "--denoise"
+  ]
+ },
+ {
+  "tool": "audio",
+  "request": "add background music that ducks under speech, with fades",
+  "argv": [
+   "{clip}",
+   "--music",
+   "music.mp3",
+   "--duck",
+   "--fade-in",
+   "1",
+   "--fade-out",
+   "2"
+  ]
+ },
+ {
+  "tool": "audio",
+  "request": "compress and limit the dialogue, downmix to mono",
+  "argv": [
+   "{clip}",
+   "--compressor",
+   "--limiter",
+   "-1",
+   "--mono"
+  ]
+ },
+ {
+  "tool": "background",
+  "request": "10 second solid navy 1080p background",
+  "argv": [
+   "--color",
+   "navy",
+   "--duration",
+   "10",
+   "--size",
+   "1920x1080"
+  ]
+ },
+ {
+  "tool": "background",
+  "request": "vertical gradient from orange to purple, 5 s",
+  "argv": [
+   "--gradient",
+   "orange",
+   "purple",
+   "--duration",
+   "5",
+   "--size",
+   "1080x1920"
+  ]
+ },
+ {
+  "tool": "background",
+  "request": "black 4K background at 30 fps for 8 s",
+  "argv": [
+   "--color",
+   "black",
+   "--duration",
+   "8",
+   "--width",
+   "3840",
+   "--height",
+   "2160",
+   "--fps",
+   "30"
+  ]
+ },
+ {
+  "tool": "batch",
+  "request": "make proxies of every file in a folder",
+  "argv": [
+   "footage/",
+   "--tool",
+   "proxy"
+  ]
+ },
+ {
+  "tool": "batch",
+  "request": "normalise loudness of all mp4s in a folder to -16 LUFS",
+  "argv": [
+   "footage/",
+   "--recipe",
+   "loudness",
+   "--pattern",
+   "*.mp4",
+   "--args",
+   "--target -16"
+  ]
+ },
+ {
+  "tool": "batch",
+  "request": "export every clip with the youtube preset, 4 at a time",
+  "argv": [
+   "footage/",
+   "--tool",
+   "export",
+   "--preset",
+   "youtube",
+   "--jobs",
+   "4"
+  ]
+ },
+ {
+  "tool": "broll",
+  "request": "show b.mp4 over the main clip from 5s for 3s",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--at",
+   "5",
+   "--duration",
+   "3"
+  ]
+ },
+ {
+  "tool": "broll",
+  "request": "cut away to b-roll between 12 and 18 seconds keeping main audio",
+  "argv": [
+   "{clip}",
+   "--broll",
+   "b.mp4",
+   "--start",
+   "12",
+   "--end",
+   "18",
+   "--keep-audio"
+  ]
+ },
+ {
+  "tool": "broll",
+  "request": "insert b-roll at 00:30 for 4s, starting 10s into the b-roll",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--at",
+   "00:00:30",
+   "--duration",
+   "4",
+   "--broll-start",
+   "10"
+  ]
+ },
+ {
+  "tool": "caption",
+  "request": "burn in subtitles from an SRT",
+  "argv": [
+   "{clip}",
+   "--subtitles",
+   "a.srt",
+   "--burn"
+  ]
+ },
+ {
+  "tool": "caption",
+  "request": "add soft English subtitle track",
+  "argv": [
+   "{clip}",
+   "--srt",
+   "a.srt",
+   "--soft",
+   "--language",
+   "eng"
+  ]
+ },
+ {
+  "tool": "caption",
+  "request": "burn subtitles with bigger white font at the bottom",
+  "argv": [
+   "{clip}",
+   "a.srt",
+   "--font-size",
+   "36",
+   "--color",
+   "white",
+   "--position",
+   "bottom"
+  ]
+ },
+ {
+  "tool": "check",
+  "request": "does this meet YouTube's spec?",
+  "argv": [
+   "{clip}",
+   "--platform",
+   "youtube"
+  ]
+ },
+ {
+  "tool": "check",
+  "request": "check against Instagram Reels requirements",
+  "argv": [
+   "{clip}",
+   "--preset",
+   "instagram-reels"
+  ]
+ },
+ {
+  "tool": "check",
+  "request": "check for TikTok and output JSON",
+  "argv": [
+   "{clip}",
+   "--platform",
+   "tiktok",
+   "--json"
+  ]
+ },
+ {
+  "tool": "color",
+  "request": "convert HDR iPhone footage to SDR",
+  "argv": [
+   "{clip}",
+   "--hdr-to-sdr"
+  ]
+ },
+ {
+  "tool": "color",
+  "request": "apply a LUT to log footage",
+  "argv": [
+   "{clip}",
+   "--lut",
+   "grade.cube"
+  ]
+ },
+ {
+  "tool": "color",
+  "request": "tone-map HLG to BT.709 using hable",
+  "argv": [
+   "{clip}",
+   "--to",
+   "bt709",
+   "--tonemap",
+   "hable"
+  ]
+ },
+ {
+  "tool": "crop",
+  "request": "crop to 1280x720 at offset 100,50",
+  "argv": [
+   "{clip}",
+   "--width",
+   "1280",
+   "--height",
+   "720",
+   "--x",
+   "100",
+   "--y",
+   "50"
+  ]
+ },
+ {
+  "tool": "crop",
+  "request": "crop a centred 1080x1080 square",
+  "argv": [
+   "{clip}",
+   "--size",
+   "1080x1080",
+   "--center"
+  ]
+ },
+ {
+  "tool": "crop",
+  "request": "crop using w:h:x:y rectangle",
+  "argv": [
+   "{clip}",
+   "--rect",
+   "1920:800:0:140"
+  ]
+ },
+ {
+  "tool": "cropdetect",
+  "request": "find the letterbox bars",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "cropdetect",
+  "request": "detect bars sampling from 60 s in, as JSON",
+  "argv": [
+   "{clip}",
+   "--start",
+   "60",
+   "--json"
+  ]
+ },
+ {
+  "tool": "cropdetect",
+  "request": "detect bars with a higher black threshold",
+  "argv": [
+   "{clip}",
+   "--threshold",
+   "32",
+   "--duration",
+   "30"
+  ]
+ },
+ {
+  "tool": "cut",
+  "request": "keep seconds 10 to 20",
+  "argv": [
+   "{clip}",
+   "--start",
+   "10",
+   "--end",
+   "20"
+  ]
+ },
+ {
+  "tool": "cut",
+  "request": "take 30 s starting at 1:00",
+  "argv": [
+   "{clip}",
+   "--start",
+   "00:01:00",
+   "--duration",
+   "30"
+  ]
+ },
+ {
+  "tool": "cut",
+  "request": "keep two segments and join them",
+  "argv": [
+   "{clip}",
+   "--segments",
+   "5-10,30-45",
+   "--join"
+  ]
+ },
+ {
+  "tool": "deinterlace",
+  "request": "deinterlace an old DV tape",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "deinterlace",
+  "request": "deinterlace to double frame rate with bwdif",
+  "argv": [
+   "{clip}",
+   "--mode",
+   "bwdif",
+   "--double-rate"
+  ]
+ },
+ {
+  "tool": "deinterlace",
+  "request": "deinterlace top-field-first footage",
+  "argv": [
+   "{clip}",
+   "--field-order",
+   "tff"
+  ]
+ },
+ {
+  "tool": "denoise",
+  "request": "clean up grainy low-light video",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "denoise",
+  "request": "strong denoise",
+  "argv": [
+   "{clip}",
+   "--strength",
+   "strong"
+  ]
+ },
+ {
+  "tool": "denoise",
+  "request": "light denoise with custom luma/chroma values",
+  "argv": [
+   "{clip}",
+   "--luma",
+   "4",
+   "--chroma",
+   "3",
+   "--temporal",
+   "6"
+  ]
+ },
+ {
+  "tool": "export",
+  "request": "export for YouTube",
+  "argv": [
+   "{clip}",
+   "--preset",
+   "youtube"
+  ]
+ },
+ {
+  "tool": "export",
+  "request": "export H.265 at CRF 22 in 1080p",
+  "argv": [
+   "{clip}",
+   "--codec",
+   "h265",
+   "--crf",
+   "22",
+   "--resolution",
+   "1080p"
+  ]
+ },
+ {
+  "tool": "export",
+  "request": "export for web under 50 MB",
+  "argv": [
+   "{clip}",
+   "--preset",
+   "web",
+   "--max-size",
+   "50M"
+  ]
+ },
+ {
+  "tool": "fit",
+  "request": "make it vertical 9:16 with blurred background",
+  "argv": [
+   "{clip}",
+   "--aspect",
+   "9:16",
+   "--mode",
+   "blur"
+  ]
+ },
+ {
+  "tool": "fit",
+  "request": "fit to exactly 30 seconds",
+  "argv": [
+   "{clip}",
+   "--duration",
+   "30"
+  ]
+ },
+ {
+  "tool": "fit",
+  "request": "square crop-to-fill, 15 seconds",
+  "argv": [
+   "{clip}",
+   "--aspect",
+   "1:1",
+   "--mode",
+   "crop",
+   "--duration",
+   "15"
+  ]
+ },
+ {
+  "tool": "freeze",
+  "request": "freeze the last frame for 3 seconds",
+  "argv": [
+   "{clip}",
+   "--at",
+   "end",
+   "--duration",
+   "3"
+  ]
+ },
+ {
+  "tool": "freeze",
+  "request": "freeze at 12.5 s for 2 s",
+  "argv": [
+   "{clip}",
+   "--at",
+   "12.5",
+   "--duration",
+   "2"
+  ]
+ },
+ {
+  "tool": "freeze",
+  "request": "hold frame at 00:00:05 for 1.5 s, keep silence",
+  "argv": [
+   "{clip}",
+   "--time",
+   "00:00:05",
+   "--hold",
+   "1.5"
+  ]
+ },
+ {
+  "tool": "graphics",
+  "request": "lower third with name and title",
+  "argv": [
+   "{clip}",
+   "--template",
+   "lower-third",
+   "--title",
+   "Jane Doe",
+   "--subtitle",
+   "CEO",
+   "--start",
+   "2",
+   "--duration",
+   "5"
+  ]
+ },
+ {
+  "tool": "graphics",
+  "request": "animated title card using brand colours",
+  "argv": [
+   "--template",
+   "title",
+   "--text",
+   "Quarterly Update",
+   "--brand",
+   "brand.json",
+   "--duration",
+   "4"
+  ]
+ },
+ {
+  "tool": "graphics",
+  "request": "progress bar across the bottom",
+  "argv": [
+   "{clip}",
+   "--template",
+   "progress-bar",
+   "--color",
+   "#ff0055",
+   "--position",
+   "bottom"
+  ]
+ },
+ {
+  "tool": "grid",
+  "request": "2x2 grid of four clips",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "c.mp4",
+   "d.mp4",
+   "--cols",
+   "2",
+   "--rows",
+   "2"
+  ]
+ },
+ {
+  "tool": "grid",
+  "request": "side by side two clips",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--layout",
+   "2x1"
+  ]
+ },
+ {
+  "tool": "grid",
+  "request": "3x1 grid at 1920x1080, audio from first clip",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "c.mp4",
+   "--grid",
+   "3x1",
+   "--size",
+   "1920x1080",
+   "--audio",
+   "0"
+  ]
+ },
+ {
+  "tool": "insert",
+  "request": "5 second clip from a still image",
+  "argv": [
+   "photo.jpg",
+   "--duration",
+   "5"
+  ]
+ },
+ {
+  "tool": "insert",
+  "request": "still as 1080p 30 fps clip for 3 s",
+  "argv": [
+   "logo.png",
+   "--duration",
+   "3",
+   "--size",
+   "1920x1080",
+   "--fps",
+   "30"
+  ]
+ },
+ {
+  "tool": "insert",
+  "request": "image with slow zoom for 6 s",
+  "argv": [
+   "photo.jpg",
+   "--duration",
+   "6",
+   "--zoom",
+   "in"
+  ]
+ },
+ {
+  "tool": "join",
+  "request": "concatenate three clips",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "c.mp4"
+  ]
+ },
+ {
+  "tool": "join",
+  "request": "join with 1 s crossfades",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--transition",
+   "fade",
+   "--transition-duration",
+   "1"
+  ]
+ },
+ {
+  "tool": "join",
+  "request": "join to 1080p 30 fps with dissolve",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "c.mp4",
+   "--transition",
+   "dissolve",
+   "--duration",
+   "0.5",
+   "--resolution",
+   "1920x1080",
+   "--fps",
+   "30"
+  ]
+ },
+ {
+  "tool": "look",
+  "request": "grab a frame at 10 s",
+  "argv": [
+   "{clip}",
+   "--at",
+   "10"
+  ]
+ },
+ {
+  "tool": "look",
+  "request": "contact sheet of 12 frames",
+  "argv": [
+   "{clip}",
+   "--contact-sheet",
+   "--count",
+   "12"
+  ]
+ },
+ {
+  "tool": "look",
+  "request": "frames at several timestamps",
+  "argv": [
+   "{clip}",
+   "--times",
+   "1,5,10",
+   "--width",
+   "960"
+  ]
+ },
+ {
+  "tool": "loop",
+  "request": "loop 3 times",
+  "argv": [
+   "{clip}",
+   "--count",
+   "3"
+  ]
+ },
+ {
+  "tool": "loop",
+  "request": "loop until 60 s long",
+  "argv": [
+   "{clip}",
+   "--duration",
+   "60"
+  ]
+ },
+ {
+  "tool": "loop",
+  "request": "loop 5 times without audio",
+  "argv": [
+   "{clip}",
+   "--times",
+   "5",
+   "--no-audio"
+  ]
+ },
+ {
+  "tool": "loudness",
+  "request": "normalise to -14 LUFS",
+  "argv": [
+   "{clip}",
+   "--target",
+   "-14"
+  ]
+ },
+ {
+  "tool": "loudness",
+  "request": "normalise to -16 LUFS, -1.5 true peak",
+  "argv": [
+   "{clip}",
+   "--lufs",
+   "-16",
+   "--true-peak",
+   "-1.5",
+   "--lra",
+   "11"
+  ]
+ },
+ {
+  "tool": "loudness",
+  "request": "just measure the loudness",
+  "argv": [
+   "{clip}",
+   "--measure"
+  ]
+ },
+ {
+  "tool": "metadata",
+  "request": "set title and artist",
+  "argv": [
+   "{clip}",
+   "--title",
+   "My Film",
+   "--artist",
+   "Jane Doe"
+  ]
+ },
+ {
+  "tool": "metadata",
+  "request": "add chapters from a file",
+  "argv": [
+   "{clip}",
+   "--chapters",
+   "chapters.txt"
+  ]
+ },
+ {
+  "tool": "metadata",
+  "request": "add chapter marks inline and a comment",
+  "argv": [
+   "{clip}",
+   "--chapter",
+   "0:00=Intro",
+   "--chapter",
+   "1:30=Main",
+   "--comment",
+   "Final cut"
+  ]
+ },
+ {
+  "tool": "multicam",
+  "request": "sync two cameras and cut per switch list",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--switch",
+   "switches.txt"
+  ]
+ },
+ {
+  "tool": "multicam",
+  "request": "two cameras with external audio recorder",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--audio",
+   "recorder.wav",
+   "--cuts",
+   "0:1,10:2,25:1"
+  ]
+ },
+ {
+  "tool": "multicam",
+  "request": "three cams, switch list as JSON",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "c.mp4",
+   "--switches",
+   "switches.json",
+   "--audio-from",
+   "1"
+  ]
+ },
+ {
+  "tool": "overlay",
+  "request": "logo in the top-right corner",
+  "argv": [
+   "{clip}",
+   "--image",
+   "logo.png",
+   "--position",
+   "top-right"
+  ]
+ },
+ {
+  "tool": "overlay",
+  "request": "title text for the first 5 s with fade",
+  "argv": [
+   "{clip}",
+   "--text",
+   "Hello World",
+   "--start",
+   "0",
+   "--end",
+   "5",
+   "--fade",
+   "0.5"
+  ]
+ },
+ {
+  "tool": "overlay",
+  "request": "semi-transparent watermark bottom-left, scaled",
+  "argv": [
+   "{clip}",
+   "--logo",
+   "logo.png",
+   "--position",
+   "bottom-left",
+   "--opacity",
+   "0.5",
+   "--scale",
+   "0.15",
+   "--margin",
+   "20"
+  ]
+ },
+ {
+  "tool": "pad",
+  "request": "2 s of black at the start",
+  "argv": [
+   "{clip}",
+   "--start",
+   "2"
+  ]
+ },
+ {
+  "tool": "pad",
+  "request": "1 s before and 3 s after",
+  "argv": [
+   "{clip}",
+   "--before",
+   "1",
+   "--after",
+   "3"
+  ]
+ },
+ {
+  "tool": "pad",
+  "request": "5 s black tail",
+  "argv": [
+   "{clip}",
+   "--end",
+   "5"
+  ]
+ },
+ {
+  "tool": "probe",
+  "request": "what's in this file?",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "probe",
+  "request": "probe as JSON",
+  "argv": [
+   "{clip}",
+   "--json"
+  ]
+ },
+ {
+  "tool": "probe",
+  "request": "show stream details",
+  "argv": [
+   "{clip}",
+   "--streams"
+  ]
+ },
+ {
+  "tool": "proxy",
+  "request": "small proxy for review",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "proxy",
+  "request": "540p proxy",
+  "argv": [
+   "{clip}",
+   "--height",
+   "540"
+  ]
+ },
+ {
+  "tool": "proxy",
+  "request": "360p proxy at 500k, 15 fps",
+  "argv": [
+   "{clip}",
+   "--height",
+   "360",
+   "--bitrate",
+   "500k",
+   "--fps",
+   "15"
+  ]
+ },
+ {
+  "tool": "redact",
+  "request": "blur a licence plate rectangle",
+  "argv": [
+   "{clip}",
+   "--x",
+   "400",
+   "--y",
+   "300",
+   "--width",
+   "200",
+   "--height",
+   "80"
+  ]
+ },
+ {
+  "tool": "redact",
+  "request": "pixelate a face region",
+  "argv": [
+   "{clip}",
+   "--rect",
+   "600:100:250:250",
+   "--mode",
+   "pixelate"
+  ]
+ },
+ {
+  "tool": "redact",
+  "request": "remove a corner logo by interpolation",
+  "argv": [
+   "{clip}",
+   "--x",
+   "1700",
+   "--y",
+   "40",
+   "--w",
+   "180",
+   "--h",
+   "60",
+   "--mode",
+   "delogo"
+  ]
+ },
+ {
+  "tool": "render",
+  "request": "render a project file",
+  "argv": [
+   "project.json"
+  ]
+ },
+ {
+  "tool": "render",
+  "request": "dry run a project",
+  "argv": [
+   "project.json",
+   "--dry-run"
+  ]
+ },
+ {
+  "tool": "render",
+  "request": "render a low-res preview",
+  "argv": [
+   "project.json",
+   "--preview"
+  ]
+ },
+ {
+  "tool": "report",
+  "request": "delivery report comparing source and final",
+  "argv": [
+   "{clip}",
+   "--output-file",
+   "final.mp4"
+  ]
+ },
+ {
+  "tool": "report",
+  "request": "report with YouTube compliance",
+  "argv": [
+   "{clip}",
+   "final.mp4",
+   "--platform",
+   "youtube"
+  ]
+ },
+ {
+  "tool": "report",
+  "request": "report with a title and the commands log",
+  "argv": [
+   "--input",
+   "{clip}",
+   "--result",
+   "final.mp4",
+   "--title",
+   "Delivery",
+   "--log",
+   "commands.log"
+  ]
+ },
+ {
+  "tool": "reverse",
+  "request": "play backwards",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "reverse",
+  "request": "reverse without sound",
+  "argv": [
+   "{clip}",
+   "--no-audio"
+  ]
+ },
+ {
+  "tool": "reverse",
+  "request": "reverse only seconds 5 to 10",
+  "argv": [
+   "{clip}",
+   "--start",
+   "5",
+   "--end",
+   "10"
+  ]
+ },
+ {
+  "tool": "scenes",
+  "request": "list scene changes",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "scenes",
+  "request": "scene detection with sensitivity 0.3 as JSON",
+  "argv": [
+   "{clip}",
+   "--threshold",
+   "0.3",
+   "--json"
+  ]
+ },
+ {
+  "tool": "scenes",
+  "request": "top 5 highlight candidates of 10 s each",
+  "argv": [
+   "{clip}",
+   "--highlights",
+   "5",
+   "--duration",
+   "10"
+  ]
+ },
+ {
+  "tool": "sequence",
+  "request": "PNG sequence to 24 fps video",
+  "argv": [
+   "frames/frame_%04d.png",
+   "--fps",
+   "24"
+  ]
+ },
+ {
+  "tool": "sequence",
+  "request": "sequence starting at frame 100, 30 fps",
+  "argv": [
+   "img_%05d.jpg",
+   "--fps",
+   "30",
+   "--start-number",
+   "100"
+  ]
+ },
+ {
+  "tool": "sequence",
+  "request": "glob of images to video",
+  "argv": [
+   "frames/*.png",
+   "--framerate",
+   "25",
+   "--glob"
+  ]
+ },
+ {
+  "tool": "silence",
+  "request": "remove dead air",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "silence",
+  "request": "list silences below -35 dB longer than 0.5 s",
+  "argv": [
+   "{clip}",
+   "--list",
+   "--threshold",
+   "-35",
+   "--min-duration",
+   "0.5"
+  ]
+ },
+ {
+  "tool": "silence",
+  "request": "cut silences, leave 0.2 s padding",
+  "argv": [
+   "{clip}",
+   "--threshold",
+   "-30dB",
+   "--min-silence",
+   "0.8",
+   "--padding",
+   "0.2"
+  ]
+ },
+ {
+  "tool": "speedramp",
+  "request": "normal, then 4x from 5-10 s, then normal",
+  "argv": [
+   "{clip}",
+   "--segments",
+   "0-5:1,5-10:4,10-end:1"
+  ]
+ },
+ {
+  "tool": "speedramp",
+  "request": "slow-mo 0.5x between 3 and 6 s",
+  "argv": [
+   "{clip}",
+   "--ramp",
+   "3:6:0.5"
+  ]
+ },
+ {
+  "tool": "speedramp",
+  "request": "2x for the first 10 s then 0.25x",
+  "argv": [
+   "{clip}",
+   "--speed",
+   "0:2",
+   "--speed",
+   "10:0.25"
+  ]
+ },
+ {
+  "tool": "sphere",
+  "request": "flat front view from 360 footage",
+  "argv": [
+   "{clip}",
+   "--yaw",
+   "0",
+   "--pitch",
+   "0",
+   "--fov",
+   "90"
+  ]
+ },
+ {
+  "tool": "sphere",
+  "request": "look right and slightly down, 1080p",
+  "argv": [
+   "{clip}",
+   "--yaw",
+   "90",
+   "--pitch",
+   "-15",
+   "--fov",
+   "100",
+   "--size",
+   "1920x1080"
+  ]
+ },
+ {
+  "tool": "sphere",
+  "request": "rear view, wide FOV",
+  "argv": [
+   "{clip}",
+   "--yaw",
+   "180",
+   "--h-fov",
+   "120",
+   "--v-fov",
+   "70"
+  ]
+ },
+ {
+  "tool": "stabilize",
+  "request": "stabilise handheld footage",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "stabilize",
+  "request": "strong smoothing",
+  "argv": [
+   "{clip}",
+   "--smoothing",
+   "30"
+  ]
+ },
+ {
+  "tool": "stabilize",
+  "request": "high shakiness, zoom to hide borders",
+  "argv": [
+   "{clip}",
+   "--shakiness",
+   "8",
+   "--smoothing",
+   "20",
+   "--zoom",
+   "5"
+  ]
+ },
+ {
+  "tool": "straighten",
+  "request": "rotate 2 degrees clockwise",
+  "argv": [
+   "{clip}",
+   "--angle",
+   "2"
+  ]
+ },
+ {
+  "tool": "straighten",
+  "request": "rotate -1.5 degrees and crop borders",
+  "argv": [
+   "{clip}",
+   "--angle",
+   "-1.5",
+   "--crop"
+  ]
+ },
+ {
+  "tool": "straighten",
+  "request": "rotate 3 degrees keeping full frame",
+  "argv": [
+   "{clip}",
+   "--degrees",
+   "3",
+   "--no-crop"
+  ]
+ },
+ {
+  "tool": "sync",
+  "request": "find offset between camera and recorder",
+  "argv": [
+   "{clip}",
+   "recorder.wav"
+  ]
+ },
+ {
+  "tool": "sync",
+  "request": "sync and replace camera audio",
+  "argv": [
+   "{clip}",
+   "recorder.wav",
+   "--replace-audio"
+  ]
+ },
+ {
+  "tool": "sync",
+  "request": "report offset with drift correction as JSON",
+  "argv": [
+   "{clip}",
+   "b.mp4",
+   "--drift",
+   "--json"
+  ]
+ },
+ {
+  "tool": "verify",
+  "request": "run the kit on my footage folder",
+  "argv": [
+   "footage/"
+  ]
+ },
+ {
+  "tool": "verify",
+  "request": "verify a single phone clip",
+  "argv": [
+   "{clip}"
+  ]
+ },
+ {
+  "tool": "verify",
+  "request": "run only some tools and write a report",
+  "argv": [
+   "footage/",
+   "--tools",
+   "color,export",
+   "--report",
+   "verify.html"
+  ]
+ },
+ {
+  "tool": "waveform",
+  "request": "waveform video of a podcast",
+  "argv": [
+   "music.mp3"
+  ]
+ },
+ {
+  "tool": "waveform",
+  "request": "spectrum at 1280x720",
+  "argv": [
+   "music.mp3",
+   "--mode",
+   "spectrum",
+   "--size",
+   "1280x720"
+  ]
+ },
+ {
+  "tool": "waveform",
+  "request": "coloured waveform on dark background",
+  "argv": [
+   "{clip}",
+   "--style",
+   "waveform",
+   "--color",
+   "#00ffcc",
+   "--background",
+   "black",
+   "--fps",
+   "30"
+  ]
+ }
+]
