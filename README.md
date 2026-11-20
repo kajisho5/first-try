@@ -19,6 +19,7 @@ Any command-line tool · Python standard library · No API keys</p>
   <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
   <img src="https://img.shields.io/badge/dependencies-none-brightgreen" alt="no dependencies">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT"></a>
+  <a href="https://github.com/sponsors/kajisho5"><img src="https://img.shields.io/badge/sponsor-%E2%9D%A4-ea4aaa?logo=githubsponsors" alt="Sponsor"></a>
 </p>
 
 ```bash
@@ -42,7 +43,7 @@ something that stays fixed.
 ---
 
 **Contents**
-[Why](#why) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Design principles](#design-principles) · [Commands](#commands) · [Teach a miss](#teach-a-miss) · [Keep it fixed](#keep-it-fixed) · [Skills](#skills) · [Tested on a real tool set](#tested-on-a-real-tool-set) · [FAQ](#faq) · [Related work](#related-work) · [Requirements](#requirements) · [Development](#development) · [Files](#files)
+[Why](#why) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Design principles](#design-principles) · [Commands](#commands) · [Teach a miss](#teach-a-miss) · [Keep it fixed](#keep-it-fixed) · [Skills](#skills) · [Tested on a real tool set](#tested-on-a-real-tool-set) · [FAQ](#faq) · [Related work](#related-work) · [Requirements](#requirements) · [Development](#development) · [Files](#files) · [Support](#support)
 
 ---
 
@@ -346,6 +347,10 @@ with the faults `first-try` looks for.
 | [`examples/toy`](examples/toy) | the Quick start's `tools.json`, guesses and ledger |
 | [`examples/ffmpeg-skill`](examples/ffmpeg-skill/README.md) | the round this came from, with its 126 guesses and its ledger |
 | [`tests/`](tests) | the test suite and the toy tool |
+
+## Support
+
+If this saves you time, you can help keep it maintained through [GitHub Sponsors](https://github.com/sponsors/kajisho5). Issues and pull requests are just as welcome.
 
 ## License
 
