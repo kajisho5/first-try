@@ -1,4 +1,9 @@
-<h1 align="center">first-try</h1>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/logo/first-try-horizontal-on-dark.svg">
+    <img src="brand/logo/first-try-horizontal.svg" height="72" alt="first-try">
+  </picture>
+</p>
 
 <p align="center"><b>Can an agent that has not read your docs use your command-line tools on the first try?</b><br>
 A fresh agent guesses the calls, <code>first-try</code> runs them, and every miss becomes an answer the tool gives and a test that keeps it.<br>
@@ -347,6 +352,7 @@ with the faults `first-try` looks for.
 | [`examples/toy`](examples/toy) | the Quick start's `tools.json`, guesses and ledger |
 | [`examples/ffmpeg-skill`](examples/ffmpeg-skill/README.md) | the round this came from, with its 126 guesses and its ledger |
 | [`tests/`](tests) | the test suite and the toy tool |
+| [`brand/logo`](brand/logo) | the logo: horizontal (light, dark) and the mark alone |
 
 ## Support
 
