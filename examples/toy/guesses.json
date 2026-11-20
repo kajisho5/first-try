@@ -1,0 +1,60 @@
+[
+ {
+  "tool": "toy",
+  "request": "tilt the picture 5 degrees",
+  "argv": [
+   "{clip}",
+   "--angle",
+   "5"
+  ]
+ },
+ {
+  "tool": "toy",
+  "request": "rotate 10 degrees, white corners",
+  "argv": [
+   "{clip}",
+   "--degrees",
+   "10",
+   "--fill-colour",
+   "white"
+  ]
+ },
+ {
+  "tool": "toy",
+  "request": "rotate by 3",
+  "argv": [
+   "{clip}",
+   "--degrees",
+   "3"
+  ]
+ },
+ {
+  "tool": "toy-plain",
+  "request": "tilt the picture 5 degrees",
+  "argv": [
+   "{clip}",
+   "--angle",
+   "5"
+  ]
+ },
+ {
+  "tool": "toy-plain",
+  "request": "rotate 10 degrees, white corners",
+  "argv": [
+   "{clip}",
+   "--degrees",
+   "10",
+   "--fill-colour",
+   "white"
+  ]
+ },
+ {
+  "tool": "toy-plain",
+  "request": "rotate by 3",
+  "argv": [
+   "{clip}",
+   "--degrees",
+   "3"
+  ]
+ }
+]
