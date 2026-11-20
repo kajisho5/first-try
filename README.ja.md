@@ -1,4 +1,9 @@
-<h1 align="center">first-try</h1>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/logo/first-try-horizontal-on-dark.svg">
+    <img src="brand/logo/first-try-horizontal.svg" height="72" alt="first-try">
+  </picture>
+</p>
 
 <p align="center"><b>あなたのコマンドラインツールは、説明書を読んでいない AI が初見で正しく使えますか？</b><br>
 何も知らない AI に呼び方を推測させ、<code>first-try</code> がそれを実行し、外れを一つずつ「ツールが返す答え」と「それを守るテスト」に変えます。<br>
@@ -19,6 +24,7 @@
   <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+">
   <img src="https://img.shields.io/badge/dependencies-none-brightgreen" alt="依存ライブラリなし">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT"></a>
+  <a href="https://github.com/sponsors/kajisho5"><img src="https://img.shields.io/badge/sponsor-%E2%9D%A4-ea4aaa?logo=githubsponsors" alt="Sponsor"></a>
 </p>
 
 ```bash
@@ -42,7 +48,7 @@ python3 first_try.py replay tools.json stumbles.jsonl   # つまずきの台帳�
 ---
 
 **目次**
-[なぜ必要か](#なぜ必要か) · [使ってみる](#使ってみる) · [しくみ](#しくみ) · [守っている決まり](#守っている決まり) · [コマンド](#コマンド) · [外れを教える](#外れを教える) · [直しっぱなしにしない](#直しっぱなしにしない) · [スキル](#スキル) · [実際のツール群で測った結果](#実際のツール群で測った結果) · [よくある質問](#よくある質問) · [関連するもの](#関連するもの) · [動かすのに必要なもの](#動かすのに必要なもの) · [開発](#開発) · [ファイル一覧](#ファイル一覧)
+[なぜ必要か](#なぜ必要か) · [使ってみる](#使ってみる) · [しくみ](#しくみ) · [守っている決まり](#守っている決まり) · [コマンド](#コマンド) · [外れを教える](#外れを教える) · [直しっぱなしにしない](#直しっぱなしにしない) · [スキル](#スキル) · [実際のツール群で測った結果](#実際のツール群で測った結果) · [よくある質問](#よくある質問) · [関連するもの](#関連するもの) · [動かすのに必要なもの](#動かすのに必要なもの) · [開発](#開発) · [ファイル一覧](#ファイル一覧) · [応援する](#応援する)
 
 ---
 
@@ -348,6 +354,11 @@ python3 -m unittest discover -s tests
 | [`examples/toy`](examples/toy) | 「使ってみる」の `tools.json`・推測・台帳 |
 | [`examples/ffmpeg-skill`](examples/ffmpeg-skill/README.md) | 元になった測定。126 件の推測と台帳つき |
 | [`tests/`](tests) | テストと試験用ツール |
+| [`brand/logo`](brand/logo) | ロゴ（横長の明るい画面用・暗い画面用と、マークだけのもの） |
+
+## 応援する
+
+役に立ったら、[GitHub Sponsors](https://github.com/sponsors/kajisho5) で開発を支えていただけます。不具合の報告や改善の提案（Issue・Pull Request）も歓迎です。
 
 ## ライセンス
 
