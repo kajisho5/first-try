@@ -19,7 +19,7 @@ One of the 27 ran and was wrong.
 | `skills/edge-probe` | The loop for values: what does the tool do with a zero, a negative, a billion? |
 | `examples/ffmpeg-skill` | The round this came from, with its 126 guesses and its ledger. |
 
-Python 3.9 or newer, standard library only. The skills are plain `SKILL.md` files: copy the two
+Python 3.10 or newer, standard library only. The skills are plain `SKILL.md` files: copy the two
 folders into your agent's skills directory (`.claude/skills/` for Claude Code).
 
 ## Five minutes

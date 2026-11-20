@@ -16,7 +16,7 @@ tools.json describes the tools under test:
                 "base": ["{clip}", "--start", "0", "--end", "1"],   a minimal valid call, for `edges`
                 "output": ["-o", "{tmp}/out.mp4"]}]}                optional, added to every call
 
-{tmp} is a fresh temporary folder. Standard library only; Python 3.9 or newer.
+{tmp} is a fresh temporary folder. Standard library only; Python 3.10 or newer.
 """
 import argparse
 import collections
